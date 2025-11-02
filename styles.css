@@ -1,0 +1,276 @@
+/* Original Style.CSS */
+
+/*
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #fafaf6;
+  color: #333;
+}
+*/
+
+header {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #3a5a40;
+}
+
+nav a {
+  text-decoration: none;
+  color: #444;
+  margin: 0 15px;
+  font-weight: 500;
+}
+
+nav a.active, nav a:hover {
+  color: #3a5a40;
+}
+
+.hero {
+  background: url('images/hero.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+}
+
+.btn {
+  background: #3a5a40;
+  color: #fff;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 25px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.highlights {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 50px 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 280px;
+  padding: 20px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.page-header {
+  text-align: center;
+  background: #e8f5e9;
+  padding: 40px 20px;
+  color: #3a5a40;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  padding: 40px 50px;
+}
+
+.about img {
+  width: 400px;
+  border-radius: 15px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 40px 50px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px 20px;
+}
+
+form {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+form button {
+  background: #3a5a40;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contact-info {
+  padding: 40px;
+  flex: 1;
+  min-width: 250px;
+}
+
+footer {
+  text-align: center;
+  background: #3a5a40;
+  color: #fff;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+/* Step 2: Add Subtle Animations (CSS) */ 
+
+/* --- Animation Effects --- */
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card, .product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, .product-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.hero h1, .hero p, .btn {
+  opacity: 0;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.hero h1 { animation-delay: 0.3s; }
+.hero p { animation-delay: 0.6s; }
+.btn { animation-delay: 0.9s; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ✅ Step 3: Enhanced Logo + Color Theme */
+
+:root {
+  --main-green: #3a5a40;
+  --accent-fruit: #f4a261;
+  --light-bg: #fafaf6;
+  --soft-green: #dcefdc;
+}
+
+body {
+  /* background: var(--light-bg); */
+  background: #fafaf6;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Logo area */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: var(--main-green);
+}
+
+/* Buttons and highlights */
+.btn {
+  background: var(--main-green);
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: var(--accent-fruit);
+}
+
+/* Header highlight */
+nav a.active, nav a:hover {
+  color: var(--accent-fruit);
+}
+
+/* Hero overlay (optional for image contrast) */
+.hero {
+  position: relative;
+  background: url('images/hero.jpg') center/cover no-repeat;
+  text-align: center;
+  color: white;
+  padding: 120px 20px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0.4,0.4);
+}
+
+.hero h1, .hero p, .btn {
+  position: relative;
+  z-index: 1;
+}
